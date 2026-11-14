@@ -1,3 +1,4 @@
+import model.Supervisor;
 
 public class RobotTask implements Runnable {
     int id;
@@ -7,7 +8,7 @@ public class RobotTask implements Runnable {
         while (!Thread.currentThread().isInterrupted()){
             try {
 
-                supervisor.VerificaEstat(id);
+                Supervisor.verificaEstatAlerta(id);
                 String bat = cinta.extreureBat(id);
                 int numEstacio = soldadura.agafa(id);
                 Sleep(random);
