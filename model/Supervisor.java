@@ -11,9 +11,19 @@ public class Supervisor {
         }
     }
 
-    public synchronized void activarSuperescalfament() {
+    public synchronized void activarAlerta() {
         this.alertaSuperescalfament = true;
-        System.out.println("\n[SUPERVISOR] 🚨 ALERTA DE SUPERESCALFAMIENTO ACTIVADA. Pausando producción...\n");
+        System.out.println("\n[SUPERVISOR]  ALERTA DE SUPERESCALFAMIENTO ACTIVADA. Pausando producción...\n");
+    }
+
+    public synchronized void desactivarAlerta() {
+        this.alertaSuperescalfament = false;
+        System.out.println("\n[SUPERVISOR]  ALERTA RESUELTA. Notificando a todos los hilos...\n");
+        notifyAll();
+    }
+
+    public synchronized boolean isAlertaActiva() {
+        return alertaSuperescalfament;
     }
 
     
