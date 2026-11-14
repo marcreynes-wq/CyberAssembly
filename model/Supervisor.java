@@ -10,5 +10,12 @@ public class Supervisor {
             wait();
         }
     }
+
+    public synchronized void activarSuperescalfament() {
+        this.alertaSuperescalfament = true;
+        System.out.println("\n[SUPERVISOR] 🚨 ALERTA DE SUPERESCALFAMIENTO ACTIVADA. Pausando producción...\n");
+    }
+
+    
     
 }
