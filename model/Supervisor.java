@@ -7,6 +7,7 @@ public class Supervisor {
 
         while (alertaSuperescalfament) {
             System.out.println("[SUPERVISOR] Robot #" + robotId + "pausado por alerta de superescalfament.");
+            wait();
         }
     }
     
