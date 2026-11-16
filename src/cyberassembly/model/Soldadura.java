@@ -59,9 +59,9 @@ public class Soldadura {
     public void signarRegistreCalitat(int robotId, String vinCotxe) throws InterruptedException {
         mutexRegistre.acquire(); // Adquiere el Mutex exclusivo
         try {
-            System.out.println("[REGISTRO CENTRAL] ✍️ Robot #" + robotId + " firmando certificado de calidad VIN: " + vinCotxe);
+            System.out.println("[REGISTRO CENTRAL]  Robot #" + robotId + " firmando certificado de calidad VIN: " + vinCotxe);
             Thread.sleep(250); // Simula el tiempo de firma
-            System.out.println("[REGISTRO CENTRAL] ✅ Firma registrada correctamente para VIN: " + vinCotxe);
+            System.out.println("[REGISTRO CENTRAL]  Firma registrada correctamente para VIN: " + vinCotxe);
         } finally {
             mutexRegistre.release(); // Garantiza la liberación del Mutex
         }

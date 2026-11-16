@@ -20,10 +20,10 @@ public class SensorAvariesTask implements Runnable {
                 Thread.sleep(3500);
                 int estacio = random.nextInt(3);
                 if (soldadura.marcarAvaria(estacio)) {
-                    System.out.println("[SENSOR DEMONIO 😈] Avería generada en Estación #" + estacio);
+                    System.out.println("[SENSOR DEMONIO ] Avería generada en Estación #" + estacio);
                     Thread.sleep(2000); // Simulación de reparación
                     soldadura.repararAvaria(estacio);
-                    System.out.println("[TÉCNICO MANTENIMIENTO 🛠️] Estación #" + estacio + " reparada.");
+                    System.out.println("[TÉCNICO MANTENIMIENTO ] Estación #" + estacio + " reparada.");
                 }
             }
         } catch (InterruptedException e) {
